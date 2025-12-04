@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px;
+        background-color: #f0f0f0;
+      }
+      img {
+        margin: 20px;
+        border: 5px solid #555;
+        width: 300px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <script>
+    let images = [
+      "lion.jpeg",
+      "tiger.jpeg",
+      "elephant.jpeg",
+      "dog.jpeg"
+    ];
+    let i=0;
+    function prev()
+    {
+      i = (i - 1 + images.length) % images.length;
+      document.getElementById("galleryImage").src = images[i];
+
+    }
+    function next()
+    {
+      i = (i + 1) % images.length;
+      document.getElementById("galleryImage").src = images[i];
+
+    }
+  </script>
+  <body>
+    <h1>Image Gallery</h1>
+    <img id="galleryImage" src="lion.jpeg" alt="Gallery Image"><br>
+    <button onclick="prev()">previous</button>
+    <button onclick="next()">next</button>
+  </body>
+</html>

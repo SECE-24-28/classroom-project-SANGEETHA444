@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function add(){
+        let num1 = document.getElementById("t1").value;
+        let num2 = document.getElementById("t2").value;
+        let sum = parseInt(num1) + parseInt(num2);
+        document.getElementById("t3").value = sum;
+        alert("The sum is " + sum);
+      }
+      function sub(){
+        let num1 = document.getElementById("t1").value;
+        let num2 = document.getElementById("t2").value;
+        let difference = parseInt(num1) - parseInt(num2);
+        document.getElementById("t3").value = difference;
+        alert("The difference is " + difference);
+      }
+      function mul(){
+        let num1 = document.getElementById("t1").value;
+        let num2 = document.getElementById("t2").value;
+        let product = parseInt(num1) * parseInt(num2);
+        document.getElementById("t3").value = product;
+        alert("The product is " + product);
+      }
+      function div(){
+        let num1 = document.getElementById("t1").value;
+        let num2 = document.getElementById("t2").value;
+        let quotient = parseInt(num1) / parseInt(num2);
+        document.getElementById("t3").value = quotient;
+        alert("The quotient is " + quotient);
+      }
+    </script>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px;
+        background-color: rgb(117, 117, 184);
+      }
+      input {
+        margin: 10px;
+        padding: 5px;
+        width: 200px;
+        font-size: 16px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: white;
+
+      } 
+      button:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" placeholder="Enter first number" id="t1"><br>
+    <input type="number" placeholder="Enter second number" id="t2"><br>
+    <input type="number" placeholder="Answer" id="t3"><br>
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">Division</button>
+  </body>
+</html>
