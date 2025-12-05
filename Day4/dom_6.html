@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    setInterval(() => {
+      let d = new Date();
+      document.getElementById("clock").innerText =
+        d.getHours().toString().padStart(2, "0") + ":" +
+        d.getMinutes().toString().padStart(2, "0") + ":" +
+        d.getSeconds().toString().padStart(2, "0");
+    }, 1000);
+  </script>
+</head>
+<body>
+  <h2 id="clock">00:00:00</h2>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <label for="user">Username:</label>
+    <input type="text" id="user" /><br /><br />
+    <label for="email">Email:</label>
+    <input type="text" id="email" /><br /><br />
+    <button id="btn" >SUBMIT</button>
+    <script>
+      let er=document.getElementById("error");  
+      let us=document.getElementById("user");
+      let em=document.getElementById("email");
+      let btn=document.getElementById("btn");
+      btn.addEventListener("click",(e)=>{
+        e.preventDefault();
+        if(us.value=="" || em.value=="")
+        {
+          alert("Please fill all the details");
+        }
+        else
+        {
+          alert("Form Submitted Successfully");
+        }
+      });
+    </script>
+  </body>
+</html>
+ 
