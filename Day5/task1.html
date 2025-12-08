@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 1</title>
+</head>
+<body>
+  <button onclick="fetch_1()">Click here</button>
+  <p id="pa"></p>
+  <script>
+  function fetch_1(){
+    let res=fetch('https://jsonplaceholder.typicode.com/users');
+    res.then((data)=>{
+      return data.json();
+    }).then((data1)=>{
+      let para=document.getElementById("pa");
+      data1.forEach((element) => {
+        para.innerHTML+=`<b>ID:</b> ${element.id} <br><b>Name:</b> ${element.name} <br><b>Username:</b> ${element.username} <br><br>`;
+      });
+    });
+     
+  }
+  </script>
+</body>
