@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TO DO LIST</title>
+
+<script>
+function add() {
+    let ul = document.getElementById("ulist");
+    let inputBox = document.getElementById("inputBox"); 
+    let li = document.createElement("li"); 
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+   
+    checkbox.onclick = function() {
+        if (checkbox.checked) {
+            span.style.textDecoration = "line-through";
+        } else {
+            span.style.textDecoration = "none";
+        }
+    };
+
+    let span = document.createElement("span");
+    span.innerText = inputBox.value + "  ";
+
+    
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+    delBtn.style.marginLeft = "10px";
+
+    delBtn.onclick = function() {
+        ul.removeChild(li);
+    };
+
+    li.appendChild(checkbox);
+    li.appendChild(span);
+    li.appendChild(delBtn);
+
+    
+    ul.appendChild(li);
+
+    // clear input
+    inputBox.value = "";
+}
+</script>
+
+</head>
+
+<body>
+    <h1>TO DO List</h1>
+
+    <input type="text" id="inputBox" placeholder="Type here">
+    <button onclick="add()">Add</button>
+
+    <ol id="ulist"></ol>
+
+</body>
+</html>
