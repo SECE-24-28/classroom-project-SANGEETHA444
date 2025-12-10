@@ -10,5 +10,4 @@ const AddStudent = (props) => {
     </div>
   )
 }
-
 export default AddStudent
