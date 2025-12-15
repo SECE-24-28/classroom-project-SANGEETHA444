@@ -1,0 +1,263 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*{
+margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.addpost {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.addpost form {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input & textarea */
+.addpost input,
+.addpost textarea {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.addpost textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Focus effect */
+.addpost input:focus,
+.addpost textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Button */
+.addpost button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.addpost button:hover {
+  background-color: #4338ca;
+}
+
+.addpost button:active {
+  transform: scale(0.97);
+}
+
+.navigation {
+  position: fixed;          /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;              /* full width */
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  background-color: #1e293b; /* dark color */
+  color: white;
+  z-index: 1000;            /* stays above content */
+}
+.home {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  margin: 16px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Remove default link styles */
+.home a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Title */
+.home h2 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+/* Date/time */
+.home p:first-of-type {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Post body */
+.home p:last-of-type {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.edit {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.edit h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* Inputs */
+.edit input,
+.edit textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Focus effect */
+.edit input:focus,
+.edit textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Delete button */
+.edit button {
+  width: 100%;
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.edit button:hover {
+  background-color: #b91c1c;
+}
+
+.edit button:active {
+  transform: scale(0.97);
+}
+
+/* No data message */
+.edit-empty {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search input {
+  width: 90%;
+  max-width: 500px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus effect */
+.search input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Placeholder */
+.search input::placeholder {
+  color: #999;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
